@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #312a58;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #ccc8c8;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option {
+            margin: 5px;
+            padding: 10px;
+            width: 200px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .btn {
+    padding: 10px 20px;
+    background-color: #66ff00;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+
+<body><header>
+        
+        <h1>Quiz Master</h1></header>
+    <nav>
+        <a href="Homepage.html">Home</a> \
+        <a href="aboutus.html">About Us</a> \
+        <a href="contact us.html">Contact</a>
+    </nav>
+
+    <section class="quiz-container">
+        <h2>Question 2</h2>
+        <p class="question">Which famous scientist developed the theory of relativity?</p>
+
+        <div class="options">
+            <button class="option" onclick="checkAnswer('Isaac Newton ')">Isaac Newton</button>
+            <button class="option" onclick="checkAnswer('Albert Einstein')">Albert Einstein</button>
+            <button class="option" onclick="checkAnswer('Stephen Hawking')">Stephen Hawking</button>
+            <button class="option" onclick="checkAnswer('Marut singh')">Marut singh</button>
+        </div>
+
+        
+        <p class="result" id="result"></p> 
+        <div><a href="feedback.html" class="btn" onclick="goBack()">Next</a></div>
+    </section>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'Albert Einstein') {
+                document.getElementById('result').innerText = 'Correct!';
+            } else {
+                document.getElementById('result').innerText = 'Incorrect. The correct answer is Albert Einstein.';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+    
